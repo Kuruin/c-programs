@@ -1,0 +1,7 @@
+&f - decimal notaion
+%e - for scientific notations 
+%g - computer decides it ( depends on the size of the exponent ) // a bit of doubt to clear
+%i - integer
+%c - for single char 
+%s - string
+%lf - to take input in the form of double (l just for scanf)
