@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/MANAV DATA/Coding/c-programs",
-      "program": "d:/MANAV DATA/Coding/c-programs/build/Debug/outDebug",
+      "cwd": "d:/MANAV DATA/Coding/c-programs/CollegeProblems",
+      "program": "d:/MANAV DATA/Coding/c-programs/CollegeProblems/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
