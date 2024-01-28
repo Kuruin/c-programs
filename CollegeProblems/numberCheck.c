@@ -4,9 +4,16 @@ void main()
     int num;
     printf("Enter a number: \n");
     scanf("%d", &num);
-    armstrong(num);
-    prime(num);
-    perfect(num);
+    if (num == 0)
+    {
+        printf("Enter a valid number\nBye!");
+    }
+    else
+    {
+        prime(num);
+        armstrong(num);
+        perfect(num);
+    }
 }
 int armstrong(int num)
 {
