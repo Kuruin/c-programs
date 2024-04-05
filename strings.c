@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include<strings.h>
+
 int main()
 {
-    char name[1];
+    char name[20];
     printf("What is your name?\n");
-    scanf("%s", name);
-    printf("your name is: %s and you are good ", name);
+    scanf("%10s", name);
+    printf("your name is: %s and you have %lu characters ", name,strlen(name));
     return 0;
 }
