@@ -1,0 +1,239 @@
+Q1:-    
+       #include <stdio.h>
+       #include<conio.h>
+       int main() {
+           int n1,n2,sum,sub,div,mult;
+           printf("Enter two numbers: ");
+           scanf("%d %d",&n1,&n2);
+           sum=n1+n2;
+           sub=n1-n2;
+           mult=n1*n2;
+           div=n1/n2;
+           printf("All Arithmetic Opeartion are: \n");
+           printf("Addition: %d \n",sum);
+           printf("Subtraction: %d \n",sub);
+           printf("Multiplication: %d \n",mult);
+           printf("Division: %d \n",div);
+       
+           return 0;
+       }
+       
+
+
+
+Q2:-
+        #include <stdio.h>
+        #include<conio.h>
+        int main() {
+            float radius,area,perimeter,len,br;
+            printf("Enter the radius of the circle: \n");
+            scanf("%f",&radius);
+            area=3.14*radius*radius;
+            printf("The radius of the circle is %f \n",radius);
+            printf("Enter the length and breadth of rectangle: ");
+            scanf("%f%f",&len,&br);
+            perimeter=2.0*(len+br);
+            printf("The perimeter of rectangle is: %f",perimeter);
+            
+            
+            return 0;
+        }
+
+Q3:-With third variable:- (same for Q10)
+        #include <stdio.h>
+        #include<conio.h>
+        void swap(int *n1, int *n2)
+        {
+            int temp=*n1;
+            *n1=*n2;
+            *n2=temp;
+        }
+        int main() {
+            int n1,n2;
+            printf("Enter two numbers: ");
+            scanf("%d%d",&n1,&n2);
+            printf("Vlaues before swapping :\n N1=%d N2=%d \n",n1,n2);
+            swap(&n1,&n2);
+            printf("Vlaues after swapping :\n N1=%d N2=%d",n1,n2);
+            
+            return 0;
+        }
+
+
+
+Without third variable:-
+        #include <stdio.h>
+        #include<conio.h>
+        int main() {
+            int n1,n2;
+            printf("Enter two numbers: ");
+            scanf("%d%d",&n1,&n2);
+            printf("Vlaues before swapping :\n N1=%d N2=%d \n",n1,n2);
+            n1=n1+n2;
+            n2=n1-n2;
+            n1=n1-n2;
+            printf("Vlaues after swapping :\n N1=%d N2=%d",n1,n2);
+            
+            return 0;
+        }
+
+
+Q4:-
+
+        #include <stdio.h>
+        #include<conio.h>
+        int main() {
+            int slices =12;
+            double halfSlices;
+            halfSlices=(double)slices/2;
+            printf("Half pizza slices are : %f",halfSlices);
+            
+            return 0;
+        }
+
+
+
+Q5:-
+
+
+         #include <stdio.h>
+         #include<string.h>
+         int main() {
+             char colour[100];
+             printf("Choose a colour(RED ORANGE GREEN): ");
+             scanf("%s",&colour);
+             if(strcmp(colour,"RED")==0)
+             {
+                 printf("STOP");
+             }
+             else if (strcmp(colour,"ORANGE")==0)
+             {
+                  printf("CAUTION");
+             }
+             else if(strcmp(colour,"GREEN")==0)
+             {
+                  printf("GO");
+             }
+             else{
+                  printf("INVALID CHOICE");
+             }
+         
+             return 0;
+         }
+
+
+
+Q6:- 
+
+        #include <stdio.h>
+        int main() {
+            int n;
+            printf("Enter weekday number from 1-7: ");
+            scanf("%d",&n);
+            switch(n){
+                case 1:printf("Monday");
+                break;
+                case 2:printf("Tuesday");
+                break;
+                case 3:printf("Wednesday");
+                break;
+                case 4:printf("Thursday");
+                break;
+                case 5:printf("Friday");
+                break;
+                case 6:printf("Saturday");
+                break;
+                case 7:printf("Sunday");
+                break;
+                default: printf("Invalid Choice");
+            }
+            return 0;
+        }
+
+
+Q7:- 
+        #include <stdio.h>
+        int factorial(int n)
+        {
+            if(n>=1)
+            {
+                return n *factorial(n-1);
+            }
+            else {
+                return 1;
+            }
+        }
+        int main() {
+            int n;
+            printf("Enter a number: ");
+            scanf("%d",&n);
+            printf("The factorial of %d is %d",n,factorial(n));
+            return 0;
+        }
+
+
+Q8:- 
+        #include <stdio.h>
+        #include<string.h>
+        int main() {
+            int a[100],n,i,j,temp=0;
+            printf("How many elements: ");
+            scanf("%d",&n);
+            printf("Enter the elements to be sorted: \n");
+            for(i=0;i<n;i++)
+            {
+                scanf("%d",&a[i]);
+                
+            }
+            printf("The sorted elements are: \n");
+            for(i=0;i<n;i++)
+            {
+                for(j=i+1;j<n;j++)
+                {
+                    if(a[i]>a[j])
+                    {
+                        temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+                
+            }
+            }
+            for(i=0;i<n;i++)
+            {
+                printf("%d \n",a[i]);
+            }
+            return 0;
+        }
+
+
+
+Q9:- 
+
+
+        #include <stdio.h>
+        #include<string.h>
+        int main() {
+            char str[100];
+            int len,i,flag=0;
+            printf("Enter a string: ");
+            gets(str);
+            len=strlen(str);
+            for(i=0;i<len;i++)
+            {
+                if(str[i]!=str[len-i-1])
+                {
+                    flag=1;
+                    break;
+                }
+                
+            }
+            if(flag==0)
+            {
+                printf("%s is  a palindrome string",str);
+            }
+            else{
+                printf("%s is  not a palindrome string",str);
+            }
+            return 0;
+        }
