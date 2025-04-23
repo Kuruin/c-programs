@@ -1,0 +1,1 @@
+ capacity / item[i].weight
